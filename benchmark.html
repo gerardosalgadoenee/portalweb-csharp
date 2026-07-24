@@ -47,7 +47,7 @@
                         </tr>
                         <tr>
                             <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background-color: var(--bg-color);">Velocidad de Compilación</td>
-                            <td style="padding: 0.8rem; border: 1px solid #ddd;">Rápido</td>
+                            <td style="padding: 0.8rem; border: 1px solid #ddd;">Media</td>
                             <td style="padding: 0.8rem; border: 1px solid #ddd;">Alto</td>
                             <td style="padding: 0.8rem; border: 1px solid #ddd;">Medio</td>
                         </tr>
@@ -59,8 +59,8 @@
                         </tr>
                         <tr>
                             <td style="padding: 0.8rem; border: 1px solid #ddd; font-weight: bold; background-color: var(--bg-color);">Calidad del Autocompletado (IntelliSense)</td>
-                            <td style="padding: 0.8rem; border: 1px solid #ddd;">Excelente</td>
-                            <td style="padding: 0.8rem; border: 1px solid #ddd;">Excelente</td>
+                            <td style="padding: 0.8rem; border: 1px solid #ddd;">Bueno</td>
+                            <td style="padding: 0.8rem; border: 1px solid #ddd;">Bueno</td>
                             <td style="padding: 0.8rem; border: 1px solid #ddd;">Bueno</td>
                         </tr>
                         <tr>
@@ -83,54 +83,82 @@
             
             <!-- Aquí tus compañeros pueden insertar una gráfica de barras o pastel hecha en Excel que represente los puntajes -->
             <div style="text-align: center;">
-                <!-- Inicia grafico comparativo -->
-                 <div style="max-width:900px;margin:auto;">
-    <h4 style="text-align:center;color:#6a1b9a;">Comparativa General de IDEs</h4>
+                <!-- Inicia gráfico comparativo -->
+<div style="max-width:900px;margin:auto;">
+    <h4 style="text-align:center;color:#6a1b9a;">
+        Comparativa General de IDEs
+    </h4>
 
-    <div style="margin:15px 0;">
-        <label><b>SharpDevelop</b></label>
-        <div style="background:#e0e0e0;border-radius:10px;">
-            <div style="width:88%;background:#7b1fa2;color:white;padding:8px;border-radius:10px;">
-                88%
-            </div>
-        </div>
-    </div>
+    <div id="grafico-ides"></div>
 
-    <div style="margin:15px 0;">
-        <label><b>JetBrains Rider</b></label>
-        <div style="background:#e0e0e0;border-radius:10px;">
-            <div style="width:92%;background:#512da8;color:white;padding:8px;border-radius:10px;">
-                92%
-            </div>
-        </div>
-    </div>
-
-    <div style="margin:15px 0;">
-        <label><b>VS Code con C# Dev Kit</b></label>
-        <div style="background:#e0e0e0;border-radius:10px;">
-            <div style="width:75%;background:#1976d2;color:white;padding:8px;border-radius:10px;">
-                75%
-            </div>
-        </div>
-    </div>
-
-    <p style="text-align:center;color:#666;font-size:14px;">
+    <p style="text-align:center;color:#666;font-size:14px;margin-top:25px;">
         Evaluación global basada en consumo de recursos, velocidad de compilación,
         facilidad de configuración, calidad del autocompletado y herramientas de depuración.
     </p>
 </div>
-                <!-- Finaliza grafico comparativo -->
+
+<script>
+const ideData = [
+    {
+        nombre: "VS Code con C# Dev Kit",
+        valor: 95,
+        color: "#2e7d32"
+    },
+    {
+        nombre: "JetBrains Rider",
+        valor: 90,
+        color: "#512da8"
+    },
+    {
+        nombre: "SharpDevelop",
+        valor: 80,
+        color: "#7b1fa2"
+    }
+];
+
+const contenedor = document.getElementById("grafico-ides");
+
+ideData.forEach(ide => {
+    contenedor.innerHTML += `
+        <div style="margin:20px 0;">
+            <label>
+                <b>${ide.nombre}</b>
+            </label>
+
+            <div style="
+                background:#e0e0e0;
+                border-radius:10px;
+                overflow:hidden;
+                margin-top:5px;
+            ">
+                <div style="
+                    width:${ide.valor}%;
+                    background:${ide.color};
+                    color:white;
+                    padding:10px;
+                    border-radius:10px;
+                    text-align:center;
+                    font-weight:bold;
+                ">
+                    ${ide.valor}%
+                </div>
+            </div>
+        </div>
+    `;
+});
+</script>
+<!-- Finaliza gráfico comparativo -->
             </div>
         </section>
 
         <!-- TARJETA: RECOMENDACIÓN FINAL SUSTENTADA (Pauta crucial del PDF) -->
         <section class="card" style="border-top: 4px solid #28a745; cursor: default;">
             <h2 style="color: #28a745;">🏆 Recomendación y Justificación Técnica Final</h2>
-            <p>Tras concluir las fases de instalación, codificación de la calculadora y evaluación de métricas de rendimiento, el grupo determina de forma unánime recomendar el uso de: <strong>[Insertar Nombre del IDE Elegido]</strong> como el entorno óptimo para el desarrollo en C#.</p>
+            <p>Tras concluir las fases de instalación, codificación de la calculadora y evaluación de métricas de rendimiento, el grupo determina de forma unánime recomendar el uso de: <strong>Visual Studio Code</strong> como el entorno óptimo para el desarrollo en C#.</p>
             
             <div style="margin-top: 1.2rem; background-color: #f4fdf6; padding: 1.2rem; border-radius: 6px; border-left: 4px solid #28a745;">
                 <p><strong>Sustentación Técnica de la Elección:</strong></p>
-                <p style="margin-top: 0.5rem; color: #2e5836;">[Tus compañeros deben redactar aquí detalladamente el porqué recomiendan ese IDE basándose en los puntos fuertes medidos en la tabla, la productividad obtenida, y la estabilidad detectada durante la práctica].</p>
+                <p style="margin-top: 0.5rem; color: #2e5836;">La elección de Visual Studio Code como entorno de desarrollo para C# se fundamenta en criterios técnicos, funcionales y de rendimiento evaluados durante el desarrollo del proyecto. Las pruebas realizadas evidenciaron que Visual Studio Code ofrece un equilibrio adecuado entre productividad, consumo de recursos y flexibilidad para la programación moderna.</p>
             </div>
         </section>
 
@@ -144,7 +172,8 @@
             <div style="background-color: #ffffff; padding: 1.2rem; border-radius: 6px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
                 <p style="color: #333; line-height: 1.6;">
                     <strong>Respuesta del Grupo:</strong> <br>
-                    [Aquí tus compañeros deben redactar el veredicto final enfocado puramente en la <br ><strong>experiencia de aprendizaje:</strong><br >  Por ejemplo: si eligen Visual Studio Community por tener todo listo en un clic, o VS Code por ser más ligero y amigable para estudiantes que están empezando con C#].
+                    Visual Studio Code con C# Dev demostró ser un entorno de desarrollo rápido, estable y fácil de configurar. La instalación del SDK de .NET y de las extensiones fue sencilla, permitiendo crear y ejecutar un proyecto de consola en C# sin inconvenientes una vez completada la configuración. El consumo de recursos fue moderado, por lo que el programa funcionó de manera fluida. Además, el autocompletado (IntelliSense) y las herramientas de depuración facilitaron la identificación y corrección de errores durante el desarrollo de la calculadora. <br >
+                    <strong>experiencia de aprendizaje:</strong><br >  VS Code por ser más ligero y amigable para estudiantes que están empezando con C#.
                 </p>
             </div>
         </section>

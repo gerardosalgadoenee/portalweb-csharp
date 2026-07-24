@@ -1,0 +1,1038 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Manual de ejecución y pruebas funcionales de una calculadora en Visual
+Studio Code</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;
+	panose-1:2 11 0 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Aptos Display";
+	panose-1:2 11 0 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:112%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:112%;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#1F4E78;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	line-height:112%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#2F75B5;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri",sans-serif;
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Cambria",serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:.65in .8in .65in .8in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=en-HN style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-top:70.0pt;text-align:center'><b><span
+lang=EN-US style='font-size:28.0pt;line-height:112%;font-family:"Aptos Display",sans-serif;
+color:#1F4E78'>MANUAL DE EJECUCIÓN Y<br>
+PRUEBAS FUNCIONALES</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN-US
+style='font-size:17.0pt;line-height:112%;color:#5B9BD5'>CALCULADORA EN VISUAL
+STUDIO CODE</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+style='color:#5B9BD5'>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=410 height=173 id="Picture 1" src="TestCalculadoraVSC.fld/image001.png"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:25.0pt;text-align:center'><span
+lang=EN-US style='font-size:12.0pt;line-height:112%;color:#555555'>Documento de
+apoyo para la validación de operaciones aritméticas<br>
+y consulta del historial de resultados</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=173 style='width:1.8in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Tipo de documento</span></b></p>
+  </td>
+  <td width=355 style='width:3.7in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Manual de usuario y pruebas</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=173 style='width:1.8in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Aplicación</span></b></p>
+  </td>
+  <td width=355 style='width:3.7in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Calculadora de consola</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=173 style='width:1.8in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Entorno</span></b></p>
+  </td>
+  <td width=355 style='width:3.7in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Visual Studio Code / Terminal integrada</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=173 style='width:1.8in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Versión del manual</span></b></p>
+  </td>
+  <td width=355 style='width:3.7in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>1.0</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>Control del documento</span></h1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <thead>
+  <tr>
+   <td width=96 valign=top style='width:1.0in;background:#1F4E78;padding:5.5pt 6.0pt 5.5pt 6.0pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   lang=EN-US style='color:white'>Versión</span></b></p>
+   </td>
+   <td width=134 valign=top style='width:1.4in;background:#1F4E78;padding:5.5pt 6.0pt 5.5pt 6.0pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   lang=EN-US style='color:white'>Fecha</span></b></p>
+   </td>
+   <td width=326 valign=top style='width:3.4in;background:#1F4E78;padding:5.5pt 6.0pt 5.5pt 6.0pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   lang=EN-US style='color:white'>Descripción</span></b></p>
+   </td>
+   <td width=96 valign=top style='width:1.0in;background:#1F4E78;padding:5.5pt 6.0pt 5.5pt 6.0pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   lang=EN-US style='color:white'>Estado</span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr>
+  <td width=96 style='width:1.0in;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1.0</span></p>
+  </td>
+  <td width=134 style='width:1.4in;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>Julio
+  de 2026</span></p>
+  </td>
+  <td width=326 style='width:3.4in;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Emisión inicial del manual de ejecución y
+  pruebas.</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>Vigente</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h1><span lang=EN-US>Contenido</span></h1>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>1. Introducción</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>2. Objetivo</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>3. Alcance</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>4. Requisitos previos</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>5. Estructura del proyecto</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>6. Ejecución del programa</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>7. Prueba de suma</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>8. Prueba de resta</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>9. Prueba de multiplicación</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>10. Prueba de división</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>11. Consulta del historial</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>12. Matriz de resultados</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>13. Buenas prácticas y solución de
+problemas</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:2.0pt;
+margin-left:.25in'><span lang=EN-US>14. Conclusiones</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Resultado esperado</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>Al finalizar este procedimiento, el usuario
+  podrá ejecutar la calculadora desde Visual Studio Code, seleccionar
+  cualquiera de sus cinco opciones, ingresar valores numéricos, comprobar los
+  resultados obtenidos y consultar el historial de operaciones realizadas.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>1. Introducción</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>Este manual describe el procedimiento para
+abrir, ejecutar y probar una calculadora desarrollada como aplicación de
+consola. Las pruebas se realizan desde Visual Studio Code mediante la terminal
+integrada y permiten validar las operaciones de suma, resta, multiplicación y
+división, además de comprobar el funcionamiento del historial.</span></p>
+
+<h1><span lang=EN-US>2. Objetivo</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>Orientar al usuario paso a paso en la
+ejecución del proyecto y documentar pruebas funcionales que demuestren que cada
+opción del menú produce el resultado esperado.</span></p>
+
+<h1><span lang=EN-US>3. Alcance</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>El documento cubre la apertura del
+proyecto, la ejecución con el comando dotnet run, la selección de opciones del
+menú, el ingreso de números, la verificación de resultados y la consulta del
+historial. No incluye la instalación de Visual Studio Code ni el desarrollo
+completo del código fuente.</span></p>
+
+<h1><span lang=EN-US>4. Requisitos previos</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>Antes de comenzar, se debe contar con
+Visual Studio Code, el entorno .NET necesario para ejecutar el proyecto y
+acceso a la carpeta donde se encuentran los archivos de la calculadora. También
+se recomienda cerrar ejecuciones anteriores para evitar confusión en la
+terminal.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#FFF2CC;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#7F6000'>Importante</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>Las capturas del borrador muestran una
+  aplicación de consola con cinco opciones: 1) Suma, 2) Resta, 3)
+  Multiplicación, 4) División y 5) Historial. En cada prueba se debe presionar
+  Enter después de seleccionar la opción y después de escribir cada número.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>5. Estructura del proyecto</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>Localice la
+carpeta del proyecto desde el Explorador de archivos. En el borrador se
+observan los archivos principales Program y Calculadora, un archivo de
+resultados y las carpetas bin y obj, generadas durante la compilación.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=464 height=261 id="Picture 2" src="TestCalculadoraVSC.fld/image002.png"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 1. Archivos y
+carpetas principales del proyecto de calculadora.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Descripción de
+  elementos</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>Program contiene el punto de entrada de la
+  aplicación; Calculadora reúne la lógica de las operaciones; resultado
+  corresponde al archivo de texto utilizado para almacenar o consultar
+  operaciones; bin y obj son carpetas creadas por .NET durante la compilación.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h2><span lang=EN-US>6. Abrir y ejecutar el programa</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>Abra la
+carpeta del proyecto en Visual Studio Code. Después, utilice la terminal
+integrada y ejecute el comando dotnet run. Cuando el programa inicie
+correctamente, aparecerá el encabezado de la calculadora y el menú de
+operaciones.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=461 height=152 id="Picture 3" src="TestCalculadoraVSC.fld/image003.png"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 2. Proyecto
+abierto en Visual Studio Code con la terminal integrada.</span></i></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=425 height=180 id="Picture 4" src="TestCalculadoraVSC.fld/image001.png"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 3. Menú principal
+de la calculadora después de ejecutar dotnet run.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Comando de ejecución</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>Escriba exactamente:  dotnet run  y presione
+  Enter. La terminal debe estar ubicada dentro de la carpeta que contiene el
+  proyecto.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>7. Prueba funcional de suma</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>Esta prueba
+verifica que el programa agregue correctamente dos valores numéricos.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=125 valign=top style='width:1.3in;background:#1F4E78;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='color:white'>Etapa</span></b></p>
+  </td>
+  <td width=384 valign=top style='width:4.0in;background:#1F4E78;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='color:white'>Acción</span></b></p>
+  </td>
+  <td width=96 valign=top style='width:1.0in;background:#1F4E78;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='color:white'>Dato</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Selección</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Escriba 1 y presione Enter.</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Primer valor</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Cuando aparezca la solicitud del primer
+  número, escriba 120 y presione Enter.</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>120</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Segundo valor</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Escriba 540 y presione Enter.</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>540</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Validación</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Confirme que la terminal muestre un
+  resultado igual a 660.</span></p>
+  </td>
+  <td width=221 style='width:2.3in;padding:5.5pt 6.5pt 5.5pt 6.5pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>660</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=469 height=262 id="Picture 5" src="TestCalculadoraVSC.fld/image004.jpg"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 4. Resultado de
+la prueba de suma: 120 + 540 = 660.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Criterio de
+  aprobación</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>La prueba se considera aprobada cuando el
+  resultado mostrado por el programa es 660.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>8. Prueba funcional de resta</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>Esta prueba
+comprueba que el programa reste el segundo valor al primero.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Escriba 2 y
+presione Enter para seleccionar Resta.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ingrese 100
+como primer número.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ingrese 55 como
+segundo número.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Verifique que
+el resultado sea 45.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=467 height=260 id="Picture 6" src="TestCalculadoraVSC.fld/image005.jpg"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 5. Resultado de
+la prueba de resta: 100 − 55 = 45.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Criterio de
+  aprobación</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>La prueba se considera aprobada cuando el
+  resultado mostrado por el programa es 45. En el borrador original se utilizó
+  la palabra “suma” por error; en esta sección el resultado corresponde a una
+  resta.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>9. Prueba funcional de multiplicación</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>Esta prueba
+valida que el programa multiplique correctamente los dos números ingresados.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Escriba 3 y
+presione Enter para seleccionar Multiplicación.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ingrese 15 como
+primer número.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ingrese 6 como
+segundo número.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Verifique que
+el resultado sea 90.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=469 height=260 id="Picture 7" src="TestCalculadoraVSC.fld/image006.jpg"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 6. Resultado de
+la prueba de multiplicación: 15 × 6 = 90.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Criterio de
+  aprobación</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>La prueba se considera aprobada cuando el
+  programa muestra 90 como resultado de multiplicar 15 por 6.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>10. Prueba funcional de división</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>Esta prueba
+confirma que el programa divida el primer número entre el segundo.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Escriba 4 y
+presione Enter para seleccionar División.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ingrese 300
+como primer número.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ingrese 20 como
+segundo número.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Verifique que
+el resultado sea 15.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=469 height=263 id="Picture 8" src="TestCalculadoraVSC.fld/image007.jpg"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 7. Resultado de
+la prueba de división: 300 ÷ 20 = 15.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Criterio de
+  aprobación</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>La prueba se considera aprobada cuando el
+  resultado mostrado es 15. Para evitar errores, nunca utilice cero como
+  segundo número en una división.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><span lang=EN-US>11. Consulta del historial</span></h2>
+
+<p class=MsoNormal style='page-break-after:avoid'><span lang=EN-US>La opción
+Historial permite revisar las operaciones registradas durante la sesión o
+almacenadas por la aplicación.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• En el menú
+principal, escriba 5.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Presione Enter.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Revise la lista
+de operaciones y confirme que aparezcan los resultados obtenidos en las pruebas
+anteriores.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:4.0pt;margin-right:0in;
+margin-bottom:2.0pt;margin-left:0in;text-align:center'><span lang=EN-US><img
+width=469 height=262 id="Picture 9" src="TestCalculadoraVSC.fld/image008.jpg"></span></p>
+
+<p class=MsoNormal align=center style='margin-top:3.0pt;margin-right:0in;
+margin-bottom:8.0pt;margin-left:0in;text-align:center'><i><span lang=EN-US
+style='font-size:9.0pt;line-height:112%;color:#595959'>Figura 8. Consulta del
+historial con las operaciones realizadas.</span></i></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#EAF3F8;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#1F4E78'>Resultado esperado</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>El historial debe mostrar las operaciones
+  efectuadas, incluyendo los valores ingresados y sus resultados: 660, 45, 90 y
+  15.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>12. Matriz de resultados</span></h1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=62 valign=top style='width:.65in;background:#1F4E78;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:9.5pt;line-height:112%;color:white'>Opción</span></b></p>
+  </td>
+  <td width=139 valign=top style='width:1.45in;background:#1F4E78;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:9.5pt;line-height:112%;color:white'>Operación</span></b></p>
+  </td>
+  <td width=96 valign=top style='width:1.0in;background:#1F4E78;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:9.5pt;line-height:112%;color:white'>Valor 1</span></b></p>
+  </td>
+  <td width=96 valign=top style='width:1.0in;background:#1F4E78;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:9.5pt;line-height:112%;color:white'>Valor 2</span></b></p>
+  </td>
+  <td width=110 valign=top style='width:1.15in;background:#1F4E78;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:9.5pt;line-height:112%;color:white'>Esperado</span></b></p>
+  </td>
+  <td width=96 valign=top style='width:1.0in;background:#1F4E78;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-size:9.5pt;line-height:112%;color:white'>Estado</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=62 style='width:.65in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>1</span></p>
+  </td>
+  <td width=139 style='width:1.45in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>Suma</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>120</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>540</span></p>
+  </td>
+  <td width=110 style='width:1.15in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>660</span></p>
+  </td>
+  <td width=96 style='width:1.0in;background:#E2F0D9;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%;color:black'>Aprobada</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=62 style='width:.65in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>2</span></p>
+  </td>
+  <td width=139 style='width:1.45in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>Resta</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>100</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>55</span></p>
+  </td>
+  <td width=110 style='width:1.15in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>45</span></p>
+  </td>
+  <td width=96 style='width:1.0in;background:#E2F0D9;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%;color:black'>Aprobada</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=62 style='width:.65in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>3</span></p>
+  </td>
+  <td width=139 style='width:1.45in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>Multiplicación</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>15</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>6</span></p>
+  </td>
+  <td width=110 style='width:1.15in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>90</span></p>
+  </td>
+  <td width=96 style='width:1.0in;background:#E2F0D9;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%;color:black'>Aprobada</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=62 style='width:.65in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>4</span></p>
+  </td>
+  <td width=139 style='width:1.45in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>División</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>300</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>20</span></p>
+  </td>
+  <td width=110 style='width:1.15in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>15</span></p>
+  </td>
+  <td width=96 style='width:1.0in;background:#E2F0D9;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%;color:black'>Aprobada</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=62 style='width:.65in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>5</span></p>
+  </td>
+  <td width=139 style='width:1.45in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>Historial</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>—</span></p>
+  </td>
+  <td width=96 style='width:1.0in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>—</span></p>
+  </td>
+  <td width=110 style='width:1.15in;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%'>Lista visible</span></p>
+  </td>
+  <td width=96 style='width:1.0in;background:#E2F0D9;padding:5.0pt 4.0pt 5.0pt 4.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-size:9.5pt;line-height:112%;color:black'>Aprobada</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>13. Buenas prácticas y solución de problemas</span></h1>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=211 valign=top style='width:2.2in;background:#1F4E78;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:white'>Situación</span></b></p>
+  </td>
+  <td width=403 valign=top style='width:4.2in;background:#1F4E78;padding:6.0pt 6.0pt 6.0pt 6.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:white'>Acción recomendada</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><b><span lang=EN-US>La terminal no reconoce dotnet</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Confirme que .NET esté instalado y
+  reinicie Visual Studio Code después de la instalación.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><b><span lang=EN-US>No aparece el menú</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Verifique que la terminal se encuentre en
+  la carpeta correcta del proyecto y vuelva a ejecutar dotnet run.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><b><span lang=EN-US>El programa no acepta el valor</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Ingrese únicamente números y presione
+  Enter después de cada dato.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><b><span lang=EN-US>La división genera error</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Compruebe que el segundo número sea
+  diferente de cero.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><b><span lang=EN-US>El historial aparece vacío</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Realice al menos una operación antes de
+  seleccionar la opción 5 y confirme que el archivo de resultados pueda
+  escribirse.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><b><span lang=EN-US>Resultados inesperados</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:6.0pt 6.5pt 6.0pt 6.5pt'>
+  <p class=MsoNormal><span lang=EN-US>Revise que la opción del menú y los
+  números ingresados coincidan con el caso de prueba.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h2><span lang=EN-US>Buenas prácticas</span></h2>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Ejecutar una
+prueba a la vez y registrar el resultado.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Utilizar datos
+sencillos que permitan comprobar manualmente la operación.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Conservar las
+capturas como evidencia de la prueba.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• No modificar el
+código mientras se realiza una validación formal.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=EN-US>• Volver al menú
+principal antes de seleccionar una operación diferente.</span></p>
+
+<span lang=EN-US style='font-size:11.0pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>14. Conclusiones</span></h1>
+
+<p class=MsoNormal><span lang=EN-US>Las pruebas documentadas confirman el
+funcionamiento de las cinco opciones disponibles en la calculadora. Los
+resultados observados para suma, resta, multiplicación y división coinciden con
+los valores esperados, y la opción Historial permite consultar las operaciones
+efectuadas. Por tanto, la aplicación cumple satisfactoriamente con el alcance
+funcional evaluado en este manual.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=624 valign=top style='width:6.5in;background:#E2F0D9;padding:9.0pt 11.0pt 9.0pt 11.0pt'>
+  <p class=MsoNormal style='margin-bottom:3.0pt'><b><span lang=EN-US
+  style='font-size:10.5pt;line-height:112%;color:#375623'>Resumen final</span></b></p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:107%'><span
+  lang=EN-US style='color:black'>Suma: 660  |  Resta: 45  |  Multiplicación:
+  90  |  División: 15  |  Historial: disponible</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

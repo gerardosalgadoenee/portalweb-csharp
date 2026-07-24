@@ -1,0 +1,965 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Manual de instalación y configuración de Visual Studio Code</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Courier;
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;
+	panose-1:2 11 0 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:112%;
+	font-size:10.5pt;
+	font-family:"Aptos",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:112%;
+	page-break-after:avoid;
+	font-size:19.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#1F4E79;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:8.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	line-height:112%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;
+	color:#2F75B5;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Aptos",sans-serif;
+	color:#595959;
+	font-weight:bold;
+	font-style:italic;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:112%;
+	font-size:10.5pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListBulletCxSpFirst, li.MsoListBulletCxSpFirst, div.MsoListBulletCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:112%;
+	font-size:10.5pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListBulletCxSpMiddle, li.MsoListBulletCxSpMiddle, div.MsoListBulletCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:112%;
+	font-size:10.5pt;
+	font-family:"Aptos",sans-serif;}
+p.MsoListBulletCxSpLast, li.MsoListBulletCxSpLast, div.MsoListBulletCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:112%;
+	font-size:10.5pt;
+	font-family:"Aptos",sans-serif;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Calibri",sans-serif;
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri",sans-serif;
+	color:#4F81BD;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size:11.0pt;
+	font-family:"Cambria",serif;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:.7in .8in .65in .8in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=en-HN style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-top:95.0pt;text-align:center'><b><span
+lang=ES style='font-size:28.0pt;line-height:112%;color:#1F4E79'>MANUAL DE
+INSTALACIÓN<br>
+Y CONFIGURACIÓN</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=ES
+style='font-size:36.0pt;line-height:112%;color:#007ACC'>VISUAL STUDIO CODE</span></b></p>
+
+<p class=MsoNormal align=center style='margin-top:.25in;text-align:center'><span
+lang=ES style='font-size:13.0pt;line-height:112%;color:#505050'>Instalación en
+Windows, configuración del idioma español, apertura de carpetas de trabajo y
+personalización inicial</span></p>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=410 height=220 id="Picture 1" src="Manual_VSC.fld/image001.png"></span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=331 style='width:3.45in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Tipo de documento</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Manual técnico de usuario</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Aplicación</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Microsoft Visual Studio Code</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;background:#D9EAF7;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Plataforma
+  utilizada</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;padding:5.0pt 7.0pt 5.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>Windows</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<span lang=EN-US style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>Control del documento</span></h1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;background:
+  #D9EAF7;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Título</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-left:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Manual de instalación y configuración de
+  Visual Studio Code</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;background:#D9EAF7;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Objetivo</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Guiar al usuario durante la descarga,
+  instalación y configuración inicial de Visual Studio Code.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;background:#D9EAF7;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Alcance</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Desde el acceso al sitio oficial hasta la
+  apertura de una carpeta de proyecto y la instalación de extensiones de
+  personalización.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;background:#D9EAF7;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Dirigido a</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Usuarios que requieren preparar Visual
+  Studio Code para actividades de programación y edición de archivos.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;background:#D9EAF7;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:black'>Fuente de
+  evidencias</span></b></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Capturas de pantalla suministradas en el
+  borrador del manual.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h1><span lang=ES>Contenido</span></h1>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>1. Introducción</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>2. Recomendaciones
+previas</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>3. Descarga del
+instalador</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>4. Instalación de
+Visual Studio Code</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>5. Configuración
+inicial</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>6. Cambio del idioma
+a español</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>7. Configuración de
+la carpeta de trabajo</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>8. Personalización
+mediante extensiones</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>9. Verificación
+final</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'><span lang=ES>10. Buenas prácticas
+y solución de problemas</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>1. Introducción</span></h1>
+
+<p class=MsoNormal><span lang=ES>Visual Studio Code es un editor de código
+utilizado para crear, editar y organizar archivos de proyectos. El presente
+manual describe el procedimiento observado en las capturas proporcionadas:
+acceso al sitio oficial, descarga e instalación en Windows, selección de
+opciones del instalador, configuración inicial, instalación del paquete de
+idioma español, apertura de una carpeta de trabajo y personalización mediante
+una extensión de iconos.</span></p>
+
+<h2><span lang=ES>1.1 Objetivo</span></h2>
+
+<p class=MsoNormal><span lang=ES>Establecer un procedimiento claro, ordenado y
+reproducible para que el usuario complete correctamente la instalación y deje
+preparada la aplicación para comenzar a trabajar.</span></p>
+
+<h2><span lang=ES>1.2 Resultado esperado</span></h2>
+
+<p class=MsoNormal><span lang=ES>Al finalizar, Visual Studio Code deberá estar
+instalado, mostrar su interfaz en español, reconocer una carpeta de proyecto y
+contar con la personalización de iconos seleccionada por el usuario.</span></p>
+
+<h1><span lang=EN-US>2. Recomendaciones previas</span></h1>
+
+<p class=MsoListBulletCxSpFirst><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Cerrar aplicaciones innecesarias antes de ejecutar el instalador.</span></p>
+
+<p class=MsoListBulletCxSpMiddle><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Comprobar que se dispone de acceso a Internet para la descarga y la
+instalación de extensiones.</span></p>
+
+<p class=MsoListBulletCxSpMiddle><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Utilizar el sitio oficial mostrado en el documento para obtener el
+instalador.</span></p>
+
+<p class=MsoListBulletCxSpLast><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Mantener seleccionada la opción de agregar Visual Studio Code al PATH,
+ya que facilita su ejecución desde la terminal después de reiniciar.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=662 valign=top style='width:6.9in;background:#EAF2F8;padding:8.0pt 9.0pt 8.0pt 9.0pt'>
+  <p class=MsoNormal><b><span lang=ES style='color:#1F4E79'>Importante: </span></b><span
+  lang=ES style='color:black'>Las capturas corresponden a una instalación por
+  usuario en Windows. Algunos textos o pantallas pueden variar según la versión
+  instalada.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>3. Descarga del instalador</span></h1>
+
+<h2><span lang=ES>Paso 1. Ingresar al sitio oficial</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Abrir el navegador
+web y acceder al sitio oficial de Visual Studio Code. En la página principal se
+muestra el botón de descarga para Windows.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+width=472 height=253 id="Picture 2" src="Manual_VSC.fld/image001.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+1. Ingresar al sitio oficial.</span></p>
+
+<p class=MsoNormal><span lang=ES>Dirección oficial: </span><span lang=EN-US><a
+href="https://code.visualstudio.com/"><span lang=ES style='color:#0563C1'>https://code.visualstudio.com/</span></a></span></p>
+
+<p class=MsoNormal><span lang=ES>Presionar el botón de descarga para Windows y
+esperar a que finalice la descarga del archivo instalador. Posteriormente,
+ejecutar el archivo descargado para iniciar el asistente.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>4. Instalación de Visual Studio Code</span></h1>
+
+<h2><span lang=ES>Paso 2. Aceptar el acuerdo de licencia</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>En la ventana del
+acuerdo de licencia, seleccionar la opción “Acepto el acuerdo”. Esta selección
+habilita el botón “Siguiente”. Presionar “Siguiente” para continuar.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=403 height=329 id="Picture 3" src="Manual_VSC.fld/image002.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+2. Aceptar el acuerdo de licencia.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=662 valign=top style='width:6.9in;background:#EAF2F8;padding:8.0pt 9.0pt 8.0pt 9.0pt'>
+  <p class=MsoNormal><b><span lang=ES style='color:#1F4E79'>Nota: </span></b><span
+  lang=ES style='color:black'>No será posible continuar mientras esté
+  seleccionada la opción “No acepto el acuerdo”.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h2><span lang=ES>Paso 3. Seleccionar la carpeta de destino</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>El asistente
+propone una carpeta de instalación dentro del perfil del usuario. Se recomienda
+conservar la ruta predeterminada, salvo que exista una política interna que
+indique otra ubicación. </span><span lang=EN-US>Presionar “Siguiente”.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=403 height=333 id="Picture 4" src="Manual_VSC.fld/image003.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+3. Seleccionar la carpeta de destino.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h2><span lang=ES>Paso 4. Definir la carpeta del menú Inicio</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Mantener el nombre
+“Visual Studio Code” para los accesos directos del menú Inicio. Si no se desea
+crear esta carpeta, puede marcarse la opción correspondiente; para una
+instalación convencional se recomienda dejarla sin marcar. </span><span
+lang=EN-US>Presionar “Siguiente”.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=410 height=335 id="Picture 5" src="Manual_VSC.fld/image004.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+4. Definir la carpeta del menú Inicio.</span></p>
+
+<h2><span lang=ES>Paso 5. Seleccionar tareas adicionales</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>En la sección de
+tareas adicionales, las capturas muestran seleccionadas las opciones “Registrar
+Code como editor para tipos de archivo admitidos” y “Agregar a PATH”. </span><span
+lang=EN-US>Mantener estas opciones activas y presionar “Siguiente”.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=410 height=329 id="Picture 6" src="Manual_VSC.fld/image005.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US>Figura
+5. Seleccionar tareas adicionales.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=662 valign=top style='width:6.9in;background:#EAF2F8;padding:8.0pt 9.0pt 8.0pt 9.0pt'>
+  <p class=MsoNormal><b><span lang=ES style='color:#1F4E79'>Nota: </span></b><span
+  lang=ES style='color:black'>Agregar al PATH permite abrir Visual Studio Code
+  desde una terminal mediante el comando correspondiente después de reiniciar
+  el sistema o la sesión.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h2><span lang=ES>Paso 6. Revisar el resumen e instalar</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Verificar la
+carpeta de destino, la carpeta del menú Inicio y las tareas adicionales
+seleccionadas. </span><span lang=EN-US>Si la información es correcta, presionar
+“Instalar”.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=410 height=339 id="Picture 7" src="Manual_VSC.fld/image006.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+6. Revisar el resumen e instalar.</span></p>
+
+<p class=MsoNormal><span lang=ES>Esperar a que el asistente copie los archivos
+y complete el proceso. Al finalizar, abrir Visual Studio Code desde el acceso
+directo o desde el menú Inicio.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>5. Configuración inicial</span></h1>
+
+<h2><span lang=ES>Paso 7. Abrir Visual Studio Code por primera vez</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>En el primer
+inicio se muestra una pantalla de bienvenida. La aplicación puede ofrecer
+opciones de inicio de sesión; estas no son obligatorias para continuar con la
+configuración básica.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=450 height=287 id="Picture 8" src="Manual_VSC.fld/image007.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+7. Abrir Visual Studio Code por primera vez.</span></p>
+
+<h2><span lang=ES>Paso 8. Seleccionar el tema visual</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>En la pantalla
+“Make it Yours”, elegir el tema de color preferido. En las capturas se mantiene
+una variante oscura. Después de seleccionar el tema, presionar “Continue”.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=450 height=288 id="Picture 9" src="Manual_VSC.fld/image008.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+8. Seleccionar el tema visual.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h2><span lang=ES>Paso 9. Completar las opciones iniciales</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>La pantalla de
+configuración puede mostrar funciones relacionadas con agentes de inteligencia
+artificial. Para una configuración básica, se puede continuar sin iniciar
+sesión y finalizar el asistente mediante el botón disponible.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=450 height=289 id="Picture 10" src="Manual_VSC.fld/image009.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+9. Completar las opciones iniciales.</span></p>
+
+<p class=MsoNormal><span lang=ES>Al terminar, se abrirá la ventana principal de
+Visual Studio Code, desde la cual se gestionan archivos, carpetas, extensiones
+y configuraciones.</span></p>
+
+<h2><span lang=ES>Paso 10. Identificar la interfaz principal</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>La interfaz
+inicial incluye la barra de actividad a la izquierda, el explorador, la zona de
+edición en el centro y paneles adicionales. Desde la barra de actividad se
+accede a las extensiones.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=451 height=253 id="Picture 11" src="Manual_VSC.fld/image010.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+10. Identificar la interfaz principal.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>6. Cambio del idioma a español</span></h1>
+
+<h2><span lang=ES>Paso 11. Buscar el paquete de idioma</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Abrir la vista de
+Extensiones desde el icono correspondiente en la barra lateral. En el cuadro de
+búsqueda escribir “Spanish Language Pack for Visual Studio Code” y seleccionar
+la extensión oficial mostrada en las capturas.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=256 id="Picture 12" src="Manual_VSC.fld/image011.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+11. Buscar el paquete de idioma.</span></p>
+
+<p class=MsoNormal><span lang=ES>Presionar el botón “Install” para instalar el
+paquete de idioma español.</span></p>
+
+<h2><span lang=ES>Paso 12. Aceptar el cambio de idioma</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Después de la
+instalación aparecerá una notificación preguntando si se desea cambiar el
+idioma de visualización a español y reiniciar. </span><span lang=EN-US>Presionar
+“Change Language and Restart”.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=324 height=80 id="Picture 13" src="Manual_VSC.fld/image012.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+12. Aceptar el cambio de idioma.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h2><span lang=ES>Paso 13. Reiniciar y comprobar la instalación</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Visual Studio Code
+se reiniciará. Al regresar a la extensión del paquete de idioma, puede
+mostrarse una notificación indicando que la instalación se completó. Verificar
+que los menús y opciones de la aplicación estén ahora en español.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=257 id="Picture 14" src="Manual_VSC.fld/image013.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+13. Reiniciar y comprobar la instalación.</span></p>
+
+<h2><span lang=ES>Paso 14. Confirmar la interfaz en español</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>En la página de
+inicio deben observarse opciones como “Abrir archivo”, “Abrir carpeta” y “Crear
+nuevo archivo”. Esta pantalla confirma que el cambio de idioma fue aplicado
+correctamente.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=257 id="Picture 15" src="Manual_VSC.fld/image014.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+14. Confirmar la interfaz en español.</span></p>
+
+<h1><span lang=ES>7. Configuración de la carpeta de trabajo</span></h1>
+
+<h2><span lang=ES>Paso 15. Abrir el menú Archivo</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Desde la barra
+superior, abrir el menú “Archivo” y seleccionar la opción “Abrir carpeta”. Esta
+acción permite cargar un directorio completo como espacio de trabajo.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=243 id="Picture 16" src="Manual_VSC.fld/image015.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+15. Abrir el menú Archivo.</span></p>
+
+<h2><span lang=ES>Paso 16. Localizar la carpeta del proyecto</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>En el explorador
+de Windows, navegar hasta la ubicación donde se encuentra la carpeta que
+contendrá los archivos del proyecto. En las capturas se utiliza una carpeta
+denominada “PROYECTO” ubicada en el Escritorio.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=382 height=202 id="Picture 17" src="Manual_VSC.fld/image016.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+16. Localizar la carpeta del proyecto.</span></p>
+
+<h2><span lang=ES>Paso 17. Seleccionar la carpeta</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Marcar la carpeta
+deseada y presionar el botón “Seleccionar carpeta”. Visual Studio Code abrirá
+el contenido del directorio en el panel Explorador.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=317 id="Picture 18" src="Manual_VSC.fld/image017.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=EN-US>Figura
+17. Seleccionar la carpeta.</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=662 valign=top style='width:6.9in;background:#EAF2F8;padding:8.0pt 9.0pt 8.0pt 9.0pt'>
+  <p class=MsoNormal><b><span lang=ES style='color:#1F4E79'>Seguridad: </span></b><span
+  lang=ES style='color:black'>Si la aplicación solicita confirmar la confianza
+  en los autores de la carpeta, revisar el origen de los archivos antes de
+  aceptar. Solo debe habilitarse la confianza cuando la carpeta sea conocida y
+  segura.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h2><span lang=ES>Paso 18. Verificar el espacio de trabajo</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Comprobar que la
+carpeta y sus archivos aparecen en el panel izquierdo. A partir de este momento
+se pueden crear, abrir, modificar y guardar archivos dentro del proyecto.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=244 id="Picture 19" src="Manual_VSC.fld/image018.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+18. Verificar el espacio de trabajo.</span></p>
+
+<span lang=ES style='font-size:10.5pt;line-height:112%;font-family:"Aptos",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>8. Personalización mediante extensiones</span></h1>
+
+<h2><span lang=ES>Paso 19. Instalar un tema de iconos</span></h2>
+
+<p class=MsoNormal style='margin-bottom:8.0pt'><span lang=ES>Abrir nuevamente
+la vista de Extensiones y buscar “Material Icon Theme”. Seleccionar la
+extensión mostrada y presionar “Instalar”. Esta extensión cambia la apariencia
+de los iconos de carpetas y tipos de archivo en el Explorador.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-US><img
+border=0 width=457 height=244 id="Picture 20" src="Manual_VSC.fld/image019.png"></span></p>
+
+<p class=MsoCaption align=center style='text-align:center'><span lang=ES>Figura
+19. Instalar un tema de iconos.</span></p>
+
+<p class=MsoNormal><span lang=ES>Después de instalarla, seleccionar el tema de
+iconos cuando la aplicación lo solicite. La personalización es opcional y no
+modifica el contenido de los archivos.</span></p>
+
+<h1><span lang=EN-US>9. Verificación final</span></h1>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=331 valign=top style='width:3.45in;border:solid windowtext 1.0pt;
+  background:#1F4E79;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:white'>Verificación</span></b></p>
+  </td>
+  <td width=331 valign=top style='width:3.45in;border:solid windowtext 1.0pt;
+  border-left:none;background:#1F4E79;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:white'>Resultado esperado</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>☐ Inicio de la aplicación</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Visual Studio Code abre sin errores.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>☐ Idioma</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Los menús principales aparecen en español.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>☐ Carpeta de trabajo</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>La carpeta seleccionada aparece en el
+  Explorador.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>☐ Edición de archivos</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Es posible abrir o crear archivos dentro del
+  proyecto.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>☐ Extensiones</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>El paquete de idioma y Material Icon Theme
+  aparecen como instalados.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=EN-US>☐ PATH</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Después de reiniciar, la aplicación puede
+  invocarse desde una terminal cuando esta opción fue seleccionada.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<h1><span lang=ES>10. Buenas prácticas y solución de problemas</span></h1>
+
+<h2><span lang=EN-US>10.1 Buenas prácticas</span></h2>
+
+<p class=MsoListBulletCxSpFirst><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Descargar Visual Studio Code únicamente desde el sitio oficial indicado
+en este manual.</span></p>
+
+<p class=MsoListBulletCxSpMiddle><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Mantener organizados los proyectos en carpetas independientes.</span></p>
+
+<p class=MsoListBulletCxSpMiddle><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Instalar solo las extensiones necesarias y revisar su editor antes de
+instalarlas.</span></p>
+
+<p class=MsoListBulletCxSpMiddle><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Reiniciar Visual Studio Code después de cambiar el idioma o instalar
+componentes que lo requieran.</span></p>
+
+<p class=MsoListBulletCxSpLast><span lang=ES style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=ES>Guardar copias de respaldo de los proyectos importantes.</span></p>
+
+<h2><span lang=EN-US>10.2 Problemas frecuentes</span></h2>
+
+<div align=center>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=331 valign=top style='width:3.45in;border:solid windowtext 1.0pt;
+  background:#1F4E79;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:white'>Situación</span></b></p>
+  </td>
+  <td width=331 valign=top style='width:3.45in;border:solid windowtext 1.0pt;
+  border-left:none;background:#1F4E79;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='color:white'>Acción recomendada</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>El instalador no permite continuar</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Confirmar que se seleccionó “Acepto el
+  acuerdo” en la ventana de licencia.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>El comando de Visual Studio Code no funciona
+  en la terminal</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Reiniciar el equipo o cerrar y abrir la
+  terminal. Comprobar que se marcó “Agregar a PATH”.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>La interfaz continúa en inglés</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Verificar que el paquete de idioma esté
+  instalado y seleccionar “Change Language and Restart”.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>La carpeta no aparece en el Explorador</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Volver a Archivo &gt; Abrir carpeta y
+  seleccionar el directorio correcto.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=331 style='width:3.45in;border:solid windowtext 1.0pt;border-top:
+  none;padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>No se pueden instalar extensiones</span></p>
+  </td>
+  <td width=331 style='width:3.45in;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:6.0pt 7.0pt 6.0pt 7.0pt'>
+  <p class=MsoNormal><span lang=ES>Comprobar la conexión a Internet y volver a
+  intentar la instalación.</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+<h1><span lang=ES>Conclusión</span></h1>
+
+<p class=MsoNormal><span lang=ES>Siguiendo este procedimiento, el usuario
+dispone de una instalación funcional de Visual Studio Code, configurada en
+español y preparada para trabajar con una carpeta de proyecto. Las extensiones
+instaladas complementan la experiencia de uso sin alterar la estructura de los
+archivos del proyecto.</span></p>
+
+</div>
+
+</body>
+
+</html>

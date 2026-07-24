@@ -4,6 +4,33 @@
     <meta charset="UTF-8">
     <title>Inicio - Mi Proyecto</title>
     <link rel="stylesheet" href="css/styles.css">
+     <style>
+  /* Contenedor de los botones */
+  .card button {
+    background-color: #6a1b9a; /* Color morado elegante (puedes cambiarlo) */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+  }
+
+  /* Efecto al pasar el cursor por encima */
+  .card button:hover {
+    background-color: #4a148c; /* Morado más oscuro */
+  }
+
+  /* Efecto al hacer clic */
+  .card button:active {
+    transform: scale(0.98); /* Pequeño efecto de hundimiento */
+  }
+</style>
 </head>
 <body>
 
@@ -22,77 +49,52 @@
             <p>Para garantizar una evaluación justa y unánime entre los entornos, se desarrolló y ejecutó la misma aplicación de <strong>Calculadora en C#</strong> en cada uno de los entornos seleccionados. El sistema evalúa operaciones aritméticas básicas y flujos de control avanzados para manejo de excepciones.</p>
         </section>
 
-        <!-- PRUEBA IDE 1 -->
-        <section class="card">
-            <h2>1. Pruebas de Ejecución en [Nombre del IDE 1, ej: Visual Studio]</h2>
-            <div style="margin-bottom: 1rem;">
-                <p><strong>Operaciones y validaciones demostradas:</strong></p>
-                <ul style="list-style-position: inside; padding-left: 0.5rem; margin-top: 0.3rem;">
-                    <li>[Explicar qué operaciones básicas se probaron: suma, resta, multiplicación, división, etc.]</li>
-                    <li><strong>Manejo de errores:</strong> [Describir cómo valida el programa las advertencias o errores críticos, ej: división entre cero o ingreso de letras en vez de números]</li>
-                </ul>
-            </div>
-            
-            <p><strong>Evidencias Reales de la Ejecución:</strong></p>
-            <div style="text-align: center; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                <!-- Tus compañeros pueden meter una o dos imágenes de evidencia por IDE -->
-                <img src="img/calculadora-ide1-exito.png" alt="Calculadora corriendo en IDE 1" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-                <img src="img/calculadora-ide1-error.png" alt="Validación de errores en IDE 1" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-            </div>
+        
 
-            <div style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 0.8rem; border-radius: 4px; margin-top: 1rem;">
-                <p><strong>⚠️ Dificultades Encontradas:</strong> [Escribir aquí cualquier problema técnico, bug de configuración o inconveniente hallado durante la ejecución en este entorno específico]</p>
+        
+
+<section class="card">
+  <h2>Pruebas con calculadora</h2>
+
+  <!-- Los botones ahora pasan la ruta directamente al iframe -->
+  <button onclick="cargarPagina('instalacion/calculadora/calculadora.html')">
+    SharpDevelop
+  </button>
+
+  <button onclick="cargarPagina('instalacion/JetBrains/JetBrains.html')">
+    JetBrains
+  </button>
+
+  <button onclick="cargarPagina('instalacion/TestCalculadoraVSC/TestCalculadoraVSC.html')">
+    visualstudio Code
+  </button>
+
+  <!-- Reemplazamos el div por un iframe -->
+  <iframe id="contenidoManual" style="width:100%; height:500px; border:none; margin-top:20px;"></iframe>
+</section>
+
+        <section class="card" onclick="window.location.href='benchmark.html'">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h3 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 0.3rem;">📖 IDEs</h3>
+                    <p style="color: #555;"></p>
+                </div>
+                <span class="btn" style="margin-top: 0; white-space: nowrap;">Ir a Benchmark &rarr;</span>
             </div>
         </section>
 
-        <!-- PRUEBA IDE 2 -->
-        <section class="card">
-            <h2>2. Pruebas de Ejecución en [Nombre del IDE 2, ej: JetBrains Rider]</h2>
-            <div style="margin-bottom: 1rem;">
-                <p><strong>Operaciones y validaciones demostradas:</strong></p>
-                <ul style="list-style-position: inside; padding-left: 0.5rem; margin-top: 0.3rem;">
-                    <li>[Explicar el comportamiento del proyecto en este entorno]</li>
-                    <li><strong>Manejo de errores:</strong> [Detallar las validaciones y advertencias arrojadas]</li>
-                </ul>
-            </div>
-            
-            <p><strong>Evidencias Reales de la Ejecución:</strong></p>
-            <div style="text-align: center; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                <img src="img/calculadora-ide2-exito.png" alt="Calculadora corriendo en IDE 2" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-                <img src="img/calculadora-ide2-error.png" alt="Validación de errores en IDE 2" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-            </div>
-
-            <div style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 0.8rem; border-radius: 4px; margin-top: 1rem;">
-                <p><strong>⚠️ Dificultades Encontradas:</strong> [Escribir aquí las dificultades particulares de este IDE]</p>
-            </div>
-        </section>
-
-        <!-- PRUEBA IDE 3 -->
-        <section class="card">
-            <h2>3. Pruebas de Ejecución en [Nombre del IDE 3, ej: VS Code]</h2>
-            <div style="margin-bottom: 1rem;">
-                <p><strong>Operaciones y validaciones demostradas:</strong></p>
-                <ul style="list-style-position: inside; padding-left: 0.5rem; margin-top: 0.3rem;">
-                    <li>[Explicar el comportamiento del proyecto en este entorno]</li>
-                    <li><strong>Manejo de errores:</strong> [Detallar las validaciones y advertencias arrojadas]</li>
-                </ul>
-            </div>
-            
-            <p><strong>Evidencias Reales de la Ejecución:</strong></p>
-            <div style="text-align: center; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
-                <img src="img/calculadora-ide3-exito.png" alt="Calculadora corriendo en IDE 3" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-                <img src="img/calculadora-ide3-error.png" alt="Validación de errores en IDE 3" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-            </div>
-
-            <div style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 0.8rem; border-radius: 4px; margin-top: 1rem;">
-                <p><strong>⚠️ Dificultades Encontradas:</strong> [Escribir aquí las dificultades particulares de este IDE]</p>
-            </div>
-        </section>
+        
     </main>
     
     <footer></footer>
     <!-- 2. Vincula el archivo JS para que el menú funcione -->
     <script src="js/menu-component.js"></script>
     <script src="js/script.js"></script>
+    <script>
+function cargarPagina(archivo) {
+    // Cambia la página visible dentro del iframe al instante
+    document.getElementById("contenidoManual").src = archivo;
+}
+</script>
 </body>
 </html>

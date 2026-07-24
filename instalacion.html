@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <title>Inicio - Mi Proyecto</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+  /* Contenedor de los botones */
+  .card button {
+    background-color: #6a1b9a; /* Color morado elegante (puedes cambiarlo) */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+  }
+
+  /* Efecto al pasar el cursor por encima */
+  .card button:hover {
+    background-color: #4a148c; /* Morado más oscuro */
+  }
+
+  /* Efecto al hacer clic */
+  .card button:active {
+    transform: scale(0.98); /* Pequeño efecto de hundimiento */
+  }
+</style>
+
 </head>
 <body>
 
@@ -64,26 +92,27 @@
             </div>
         </section>
 
-        <!-- TARJETA: PASO 2 (INSTALACIÓN Y CONFIGURACIÓN) -->
-        <section class="card">
-            <h2>Paso 2: Proceso de Instalación y Configuración</h2>
-            <p>[Describir el proceso del asistente de instalación, si hay que marcar alguna casilla especial o configurar variables de entorno]</p>
-            <div style="text-align: center; margin-top: 1rem;">
-                <!-- Captura del instalador ejecutándose -->
-                <img src="img/evidencia-instalacion.png" alt="Evidencia de Instalación" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-            </div>
-        </section>
+<!-- TARJETA: PASO 2 (INSTALACIÓN Y CONFIGURACIÓN) -->
+    <section class="card">
+  <h2>Paso 2: Proceso de Instalación y Configuración</h2>
 
-        <!-- TARJETA: PASO 3 (EVIDENCIA DE FUNCIONAMIENTO) -->
-        <section class="card">
-            <h2>Paso 3: Verificación y Evidencia de Funcionamiento</h2>
-            <p>[Explicar cómo verificar que todo quedó bien instalado, por ejemplo abriendo la consola y escribiendo 'dotnet --version']</p>
-            <div style="text-align: center; margin-top: 1rem;">
-                <!-- Captura de la terminal con el comando funcionando -->
-                <img src="img/evidencia-verificacion.png" alt="Evidencia de Funcionamiento" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
-            </div>
-        </section>
-        <!-- BOTÓN PRINCIPAL: ACCESO A LA GUÍA CDE INSTALACIÓN-->
+  <!-- Los botones ahora pasan la ruta directamente al iframe -->
+  <button onclick="cargarPagina('instalacion/SharpDevelop/SharpDevelop.html')">
+    SharpDevelop
+  </button>
+
+  <button onclick="cargarPagina('instalacion/JetBrains/JetBrains.html')">
+    JetBrains
+  </button>
+
+  <button onclick="cargarPagina('instalacion/InstallVSC/InstallVSC.html')">
+    visualstudio Code
+  </button>
+
+  <!-- Reemplazamos el div por un iframe -->
+  <iframe id="contenidoManual" style="width:100%; height:500px; border:none; margin-top:20px;"></iframe>
+</section>
+        <!-- BOTÓN PRINCIPAL: ACCESO A LA IDES-->
         <section class="card" onclick="window.location.href='ides.html'">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <div>
@@ -98,5 +127,13 @@
     <footer></footer>
     <!-- 2. Vincula el archivo JS para que el menú funcione -->
     <script src="js/menu-component.js"></script>
+   <script>
+function cargarPagina(archivo) {
+    // Cambia la página visible dentro del iframe al instante
+    document.getElementById("contenidoManual").src = archivo;
+}
+</script>
+
+
 </body>
 </html>
