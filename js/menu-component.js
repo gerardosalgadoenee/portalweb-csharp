@@ -23,9 +23,9 @@ class MenuSuperior extends HTMLElement {
                     <li><a href="introduccion.html" class="${paginaActual === 'introduccion.html' ? 'active' : ''}">Introducción</a></li>
                     <li><a href="instalacion.html" class="${paginaActual === 'instalacion.html' ? 'active' : ''}">Instalación</a></li>
                     <li><a href="ides.html" class="${paginaActual === 'ides.html' ? 'active' : ''}">IDEs</a></li>
-                    <li><a href="calculadora.html" class="${paginaActual === 'calculadora.html' ? 'active' : ''}">Calculadora</a></li>
                     <li><a href="pruebas.html" class="${paginaActual === 'pruebas.html' ? 'active' : ''}">Pruebas</a></li>
                     <li><a href="benchmark.html" class="${paginaActual === 'benchmark.html' ? 'active' : ''}">Benchmark</a></li>
+                    <li><a href="calculadora.html" class="${paginaActual === 'calculadora.html' ? 'active' : ''}">Calculadora</a></li>
                 </ul>
             </nav>
             <style>
