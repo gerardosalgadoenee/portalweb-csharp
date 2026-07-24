@@ -1,0 +1,259 @@
+:root {
+    --primary-color: #68217a;
+    --secondary-color: #4b1a57;
+    --accent-color: #007acc;
+    --text-color: #333333;
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 0.3rem;
+}
+
+ul {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.site-link {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #005999;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+/* --- ESTILOS ADAPTADOS PARA EL CREADOR, HISTORIA Y DESCARGAS --- */
+
+.creator-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.creator-card h2, 
+.creator-card .subtitle {
+    text-align: center;
+    width: 100%;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.creator-profile-img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+}
+
+.creator-text p {
+    margin-bottom: 1rem;
+}
+
+/* Línea de Tiempo (Timeline) */
+.timeline {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.timeline-item {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: calc(-1.5rem - 7px);
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Estilos de la lista de descargas */
+.download-list {
+    margin-top: 1rem;
+}
+
+.download-item {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.download-item h3 {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.3rem;
+}
+
+.download-item p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.6rem;
+}
+
+.download-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección de arquitectura híbrida */
+.architecture-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.architecture-block {
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border-top: 3px solid var(--primary-color);
+}
+
+.architecture-block h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.architecture-block p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+.architecture-block .badge {
+    display: inline-block;
+    background-color: #e6dee7;
+    color: var(--secondary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.architecture-summary {
+    background-color: #fff9e6;
+    border-left: 4px solid #ffcc00;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.architecture-summary h4 {
+    color: #665200;
+    margin-bottom: 0.5rem;
+}
+
+.architecture-summary ul {
+    margin-left: 1.2rem;
+}
+
+.architecture-summary li {
+    font-size: 0.95rem;
+    color: #554400;
+    margin-bottom: 0.4rem;
+}
