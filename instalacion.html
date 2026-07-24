@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Mi Proyecto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1. El menú aparecerá mágicamente aquí -->
+    <menu-superior></menu-superior>
+
+    <header>
+        <h1>Guía de Instalación de C#</h1>
+        <p>Configuración paso a paso del entorno de desarrollo global (.NET SDK)</p>
+    </header>
+
+    <main class="container">
+        <!-- TARJETA: REQUISITOS PREVIOS -->
+        <section class="card">
+            <h2>Requisitos Previos del Sistema</h2>
+            <p>
+    <strong>SharpDevelop</strong><br >
+• Windows: Windows XP, Vista, 7, 8 o superiores compatibles con .NET Framework.<br >
+• Memoria RAM: 512 MB mínimo, 1 GB o más recomendado.<br >
+• Espacio en disco: Necesita aproximadamente 8.7 MB de espacio en disco para la instalación básica.<br >
+• Requisitos del sistema: .NET Framework 1.1, 2.0, 3.5 o superior según la versión utilizada.<br >
+• Acceso a datos: Se recomienda tener instalado MSDE (Microsoft SQL Server Desktop Engine) o SQL Server para proyectos que requieran conexión a bases de datos.<br >
+• Lenguajes compatibles: C#, VB.NET, Boo e IronPython.
+</p>  
+<p><strong>JetBrains</strong><br > • Windows: 64 bit, .NET Framework 4.7.2+, 8 GB RAM mínimo<br >
+•	macOS: macOS 12+, Intel o Apple Silicon<br >
+•	Linux: Ubuntu, Debian, Fedora o similares
+</p>
+    <strong>Visual Studio Code</strong><br >
+• Windows: Windows 10/11 (64 bits), 4 GB RAM recomendado, .NET SDK 8.0 o superior para desarrollo en C#.<br >
+• macOS: macOS 10.15 o superior, Intel o Apple Silicon, .NET SDK 8.0 o superior.<br >
+• Linux: Ubuntu, Debian, Fedora o distribuciones compatibles (64 bits), .NET SDK 8.0 o superior.<br >
+• Espacio en disco: Aproximadamente 500 MB para VS Code y espacio adicional para extensiones y SDKs.
+</p>      
+</section>
+
+        <!-- TARJETA: PASO 1 (DESCARGA) -->
+        <section class="card">
+            <h2>Paso 1: Descarga de la Fuente Oficial</h2>
+            <p><strong>SharpDevelop (version 4.4.1.9729)</strong><br > No cuenta con un sitio web oficial activo propio, ya que el proyecto está descontinuado, pero sus archivos y código fuente oficiales se distribuyen a través de <a href="https://sourceforge.net/projects/sharpdevelop/" target="_blank">SharpDevelop en SourceForge</a> y el repositorio de <a href="https://github.com/icsharpcode/sharpdevelop" target="_blank">SharpDevelop en GitHub.</a> Su última versión estable fue lanzada el 14 de abril de 2016</p>
+            <!-- <div style="text-align: center; margin-top: 1rem;"> -->
+            <div style="display:flex; gap:15px; justify-content:center; align-items:stretch; flex-wrap:wrap; margin-top:1rem; ">
+                <!-- Reemplazar src por la ruta de la captura de pantalla de la página de descarga -->
+                <img src="img/sd_instal1.jpg" alt="Evidencia de Descarga" style="width:48%; height:250px; object-fit:contain; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); border:1px solid #ddd; background:#fff;">
+                <img src="img/sd_instal2.jpg" alt="Evidencia de Descarga" style="width:48%; height:250px; object-fit:contain; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); border:1px solid #ddd; background:#fff;">
+            </div><br >
+            <p><strong>JetBrains (version 2026.2)</strong><br >sitio web oficial activo<a href="https://www.jetbrains.com/rider/?utm_source=copilot.com" target="_blank">JetBrains Download</a></p>
+            <div style="display:flex; gap:15px; justify-content:center; align-items:stretch; flex-wrap:wrap; margin-top:1rem; ">
+                <!-- Reemplazar src por la ruta de la captura de pantalla de la página de descarga -->
+                <img src="img/jb_instal1.jpg" alt="Evidencia de Descarga" style="width:48%; height:250px; object-fit:contain; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); border:1px solid #ddd; background:#fff;">
+                <img src="img/jb_instal2.jpg" alt="Evidencia de Descarga" style="width:48%; height:250px; object-fit:contain; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); border:1px solid #ddd; background:#fff;">
+            </div><br >
+            <p><strong>Visual Studio Code (Version 1.130)</strong><br >sitio web oficial activo<a href="https://code.visualstudio.com/download?_exp_download=fb315fc982" target="_blank">Visual Studio Code Download</a></p>
+            <div style="display:flex; gap:15px; justify-content:center; align-items:stretch; flex-wrap:wrap; margin-top:1rem; ">
+                <!-- Reemplazar src por la ruta de la captura de pantalla de la página de descarga -->
+                <img src="img/vc_instal1.jpg" alt="Evidencia de Descarga" style="width:48%; height:250px; object-fit:contain; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); border:1px solid #ddd; background:#fff;">
+                <img src="img/vc_instal2.jpg" alt="Evidencia de Descarga" style="width:48%; height:250px; object-fit:contain; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); border:1px solid #ddd; background:#fff;">
+            </div>
+        </section>
+
+        <!-- TARJETA: PASO 2 (INSTALACIÓN Y CONFIGURACIÓN) -->
+        <section class="card">
+            <h2>Paso 2: Proceso de Instalación y Configuración</h2>
+            <p>[Describir el proceso del asistente de instalación, si hay que marcar alguna casilla especial o configurar variables de entorno]</p>
+            <div style="text-align: center; margin-top: 1rem;">
+                <!-- Captura del instalador ejecutándose -->
+                <img src="img/evidencia-instalacion.png" alt="Evidencia de Instalación" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+
+        <!-- TARJETA: PASO 3 (EVIDENCIA DE FUNCIONAMIENTO) -->
+        <section class="card">
+            <h2>Paso 3: Verificación y Evidencia de Funcionamiento</h2>
+            <p>[Explicar cómo verificar que todo quedó bien instalado, por ejemplo abriendo la consola y escribiendo 'dotnet --version']</p>
+            <div style="text-align: center; margin-top: 1rem;">
+                <!-- Captura de la terminal con el comando funcionando -->
+                <img src="img/evidencia-verificacion.png" alt="Evidencia de Funcionamiento" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+            </div>
+        </section>
+        <!-- BOTÓN PRINCIPAL: ACCESO A LA GUÍA CDE INSTALACIÓN-->
+        <section class="card" onclick="window.location.href='ides.html'">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h3 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 0.3rem;">📖 IDEs</h3>
+                    <p style="color: #555;"></p>
+                </div>
+                <span class="btn" style="margin-top: 0; white-space: nowrap;">Ir a IDEs &rarr;</span>
+            </div>
+        </section>
+    </main>
+    
+    <footer></footer>
+    <!-- 2. Vincula el archivo JS para que el menú funcione -->
+    <script src="js/menu-component.js"></script>
+</body>
+</html>

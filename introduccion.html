@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción a C#</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1. El menú aparecerá mágicamente aquí -->
+    <menu-superior></menu-superior>
+
+<header>
+        <h1>Lenguaje de Programación C#</h1>
+        <p>Un lenguaje moderno, versátil y potente</p>
+    </header>
+
+    <main class="container">
+        <!-- SECCIÓN 1: ORIGEN -->
+        <section class="card">
+            <h2>Origen</h2>
+            <p>C# fue desarrollado por Microsoft a finales de los años 90 como parte de su iniciativa .NET. Su diseño inicial se inspiró en lenguajes como C++ y Java, buscando combinar la potencia del primero con la simplicidad del segundo.</p>
+        </section>
+
+        <!-- SECCIÓN 2: CREADOR -->
+        <section class="card creator-card">
+            <img src="img/anders-hejlsberg.png" alt="Anders Hejlsberg" class="creator-profile-img">
+            <h2>Creador: Anders Hejlsberg</h2>
+            <p class="subtitle">Ingeniero de Software Danés - Arquitecto Principal de C#</p>
+            
+            <div class="creator-text">
+                <p><strong>Trayectoria:</strong> Anders Hejlsberg es uno de los arquitectos de software más influyentes de la historia moderna. Antes de unirse a Microsoft en 1996, diseñó Turbo Pascal (1983) en Borland, que revolucionó la programación en PC, y posteriormente Delphi (1995), un entorno de desarrollo visual pionero. Su experiencia en compiladores y lenguajes de tipado fuerte sentó las bases para el diseño de C#.</p>
+                <p><strong>En Microsoft:</strong> En enero de 1999, Hejlsberg formó un equipo interno en Microsoft para crear un nuevo lenguaje orientado a objetos inicialmente llamado "COOL" (C-like Object Oriented Language). El equipo incluyó a Scott Wiltamuth y Peter Golde como co-diseñadores. El nombre "COOL" no pudo registrarse por problemas de marca, por lo que en julio de 2000, durante la Professional Developers Conference (PDC), Microsoft anunció oficialmente el lenguaje como C# junto con .NET Framework y Visual Studio .NET.</p>
+                <p><strong>Legado:</strong> Hejlsberg ha sido el arquitecto líder de C# durante más de 25 años, dirigiendo la evolución del lenguaje desde C# 1.0 hasta C# 14. También lideró el desarrollo del compilador Roslyn (open source desde 2014) y el lenguaje TypeScript (2012).</p>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: EJECUCIÓN Y ARQUITECTURA -->
+        <section class="card">
+            <h2>Ejecución y Arquitectura del Lenguaje</h2>
+            <p>C# es un lenguaje de naturaleza <strong>híbrida que utiliza una máquina virtual</strong> para su ejecución. El proceso se divide en dos etapas principales:</p>
+            <ol style="list-style-position: inside; margin: 1rem 0; padding-left: 0.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>Compilación a código intermedio:</strong> Cuando compilas tu proyecto, el código fuente en C# no se convierte directamente en instrucciones que el procesador entienda. En su lugar, se compila a un lenguaje intermedio llamado <strong>IL (Intermediate Language)</strong> o CIL.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Ejecución en la Máquina Virtual:</strong> Este código IL es procesado por el <strong>CLR (Common Language Runtime)</strong>, que actúa como la máquina virtual de .NET. Dentro del CLR, un compilador <strong>JIT (Just-In-Time)</strong> traduce el código intermedio a código de máquina real (ceros y unos) justo en el momento en que la aplicación se ejecuta en el sistema operativo.</li>
+            </ol>
+        </section>
+
+        <!-- SECCIÓN 3: PRINCIPALES USOS -->
+        <section class="card">
+            <h2>Principales Usos</h2>
+            <ul>
+                <li>Desarrollo de aplicaciones de escritorio (Windows Forms, WPF).</li>
+                <li>Desarrollo web robusto (ASP.NET Core).</li>
+                <li>Creación de videojuegos utilizando el motor Unity.</li>
+                <li>Aplicaciones móviles multiplataforma (MAUI).</li>
+                <li>Servicios en la nube y microservicios.</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN 4: VERSIÓN UTILIZADA -->
+        <section class="card">
+            <h2>Versión Utilizada</h2>
+            <p>Actualmente se trabaja con la versión estable más reciente (C# 14 junto con .NET 10), la cual incluye mejoras en colecciones, extensiones de partial members, nuevos atributos de resolución de sobrecarga y la clase Lock para sincronización de hilos.</p>
+        </section>
+
+        <!-- SECCIÓN 5: HITOS HISTÓRICOS -->
+        <section class="card">
+            <h2>Hitos Históricos de C#</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1999</div>
+                    <p><strong>El Proyecto COOL:</strong> Inicia el desarrollo de un nuevo lenguaje moderno, con tipado fuerte que se integraría perfectamente con la nueva plataforma .NET.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2002</div>
+                    <p><strong>C# 1.0 Lanzamiento Oficial:</strong> Debut oficial junto a .NET Framework 1.0. Incluía clases, interfaces, propiedades y eventos.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2005 - 2007</div>
+                    <p><strong>Evolución Técnica (2.0 y 3.0):</strong> Introducción de Generics, soporte principal de Unity para videojuegos, expresiones Lambda y la llegada revolucionaria de LINQ.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2014</div>
+                    <p><strong>Era Open Source:</strong> Microsoft libera el compilador Roslyn en GitHub y comienza el desarrollo multiplataforma con .NET Core.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <p><strong>Unificación Total:</strong> Lanzamiento de .NET 5, unificando definitivamente el Framework clásico, Core y Mono en un único ecosistema global.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: DESCARGAS Y HERRAMIENTAS ESENCIALES -->
+                <!-- SECCIÓN: DESCARGAS Y HERRAMIENTAS ESENCIALES -->
+        <section class="card">
+            <h2>Descargas y Herramientas Esenciales</h2>
+            <p>Dependiendo de si prefieres trabajar con un IDE completo en Windows o un editor ligero multiplataforma (VS Code), puedes descargar las siguientes herramientas oficiales:</p>
+            
+            <div class="download-list">
+                <div class="download-item">
+                    <h3>Visual Studio Community</h3>
+                    <p>El entorno de desarrollo integrado (IDE) nativo y profesional de Microsoft para Windows. Viene preconfigurado con compiladores, diseñadores visuales y todo lo necesario para empezar sin instalar nada extra.</p>
+                    <a href="https://visualstudio.microsoft.com/es/vs/community/" target="_blank" class="download-link">Descargar Visual Studio</a>
+                </div>
+
+                <div class="download-item">
+                    <h3>JetBrains Rider</h3>
+                    <p>Un potente IDE comercial, multiplataforma y de altísimo rendimiento para el ecosistema .NET. Es ampliamente elegido en entornos profesionales debido a su velocidad, integraciones avanzadas de refactorización y excelente soporte para desarrollo web y videojuegos.</p>
+                    <a href="https://www.jetbrains.com/rider/download/?section=windows" target="_blank" class="download-link">Descargar JetBrains Rider</a>
+                </div>
+
+                <div class="download-item">
+                    <h3>C# Dev Kit (para VS Code)</h3>
+                    <p>Una extensión oficial esencial si usas Visual Studio Code. Aporta una experiencia de desarrollo avanzada, agregando un Explorador de Soluciones, gestión de proyectos profesionales y herramientas de testing integradas.</p>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit" target="_blank" class="download-link">Ver en Marketplace</a>
+                </div>
+
+                <div class="download-item">
+                    <h3>.NET Extension Pack (para VS Code)</h3>
+                    <p>Un paquete de extensiones recomendado por Microsoft que instala en un solo clic el soporte de lenguaje base, C# Dev Kit e IntelliCode para ayudarte a escribir código más rápido con asistencia de IA.</p>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-pack" target="_blank" class="download-link">Ver en Marketplace</a>
+                </div>
+
+                <div class="download-item">
+                    <h3>.NET Install Tool (para VS Code)</h3>
+                    <p>Una herramienta interna automatizada que permite a las extensiones de VS Code adquirir e instalar de forma aislada y local los entornos de ejecución (.NET Runtime) requeridos para funcionar correctamente.</p>
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime" target="_blank" class="download-link">Ver en Marketplace</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 6: SITIO OFICIAL -->
+        <section class="card site-link">
+            <h2>Sitio Oficial</h2>
+            <p>Puedes encontrar la documentación oficial, tutoriales y descargas en:</p>
+            <a href="https://dotnet.microsoft.com/es-es/languages/csharp" target="_blank" class="btn">Visitar Sitio Oficial de C#</a>
+        </section>
+
+        <!-- SECCIÓN: ARQUITECTURA DE EJECUCIÓN DETALLADA -->
+        <section class="card architecture-card">
+            <h2>Arquitectura de Ejecución: ¿Por qué C# es Híbrido?</h2>
+            <p>A menudo surge la duda de si C# es compilado o interpretado. La realidad es que es un <strong>lenguaje híbrido</strong> que combina lo mejor de ambos mundos mediante el uso de una <strong>máquina virtual</strong>. A continuación se explica a detalle el porqué de esta infraestructura:</p>
+            
+            <div class="architecture-grid">
+                <div class="architecture-block">
+                    <h3>1. La Fase Compilada (Tiempo de Desarrollo)</h3>
+                    <p>C# no se traduce directamente a código que el procesador nativo de tu computadora entienda (como ceros y unos de Intel o AMD). En su lugar, el compilador de C# (Roslyn) traduce tu código fuente a un lenguaje intermedio de alto nivel llamado <strong>IL (Intermediate Language)</strong> o CIL.</p>
+                    <span class="badge">Salida: Archivos .dll o .exe en código IL</span>
+                </div>
+
+                <div class="architecture-block">
+                    <h3>2. El Rol de la Máquina Virtual (Tiempo de Ejecución)</h3>
+                    <p>Para ejecutar ese código intermedio se requiere del <strong>CLR (Common Language Runtime)</strong>, que funciona como la máquina virtual de .NET. El CLR es el corazón del sistema: administra la memoria (Garbage Collector), gestiona la seguridad y aísla la aplicación del sistema operativo físico.</p>
+                    <span class="badge">Entorno: CLR (Common Language Runtime)</span>
+                </div>
+
+                <div class="architecture-block">
+                    <h3>3. La Fase Interpretada/JIT (Just-In-Time)</h3>
+                    <p>Aquí es donde ocurre la parte híbrida. En lugar de interpretar el código IL línea por línea (como haría un lenguaje puramente interpretado), un componente dentro del CLR llamado <strong>Compilador JIT (Just-In-Time)</strong> toma los bloques de código IL y los compila a código de máquina real justo en el momento en que la aplicación los necesita.</p>
+                    <span class="badge">Resultado: Velocidad casi nativa</span>
+                </div>
+            </div>
+
+            <div class="architecture-summary">
+                <h4>¿Por qué Microsoft diseñó C# de esta manera?</h4>
+                <ul>
+                    <li><strong>Multiplataforma Real:</strong> El mismo archivo compilado (.dll) funciona en Windows, Linux o macOS sin cambios; solo necesitas que esa plataforma tenga instalado su respectivo CLR.</li>
+                    <li><strong>Optimizaciones sobre la marcha:</strong> El compilador JIT puede optimizar el código específicamente para las instrucciones exactas del procesador que está usando el cliente final en ese instante.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- BOTÓN PRINCIPAL: ACCESO A LA GUÍA CDE INSTALACIÓN-->
+        <section class="card" onclick="window.location.href='instalacion.html'">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h3 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 0.3rem;">📖 Instalación</h3>
+                    <p style="color: #555;"></p>
+                </div>
+                <span class="btn" style="margin-top: 0; white-space: nowrap;">Ir a instalación &rarr;</span>
+            </div>
+        </section>
+    </main>
+    
+     
+
+
+    <footer></footer>
+
+    <!-- 2. Vincula el archivo JS para que el menú funcione -->
+    <script src="js/menu-component.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Mi Proyecto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1. El menú aparecerá mágicamente aquí -->
+    <menu-superior></menu-superior>
+
+    <header>
+        <h1>Ejecución y Pruebas en Entornos</h1>
+        <p>Evidencias reales de la ejecución del proyecto Calculadora en los 3 IDEs</p>
+    </header>
+
+    <main class="container">
+        <!-- TARJETA: ESPECIFICACIONES DEL PROYECTO -->
+        <section class="card" style="cursor: default;">
+            <h2>Especificaciones del Proyecto Evaluado</h2>
+            <p>Para garantizar una evaluación justa y unánime entre los entornos, se desarrolló y ejecutó la misma aplicación de <strong>Calculadora en C#</strong> en cada uno de los entornos seleccionados. El sistema evalúa operaciones aritméticas básicas y flujos de control avanzados para manejo de excepciones.</p>
+        </section>
+
+        <!-- PRUEBA IDE 1 -->
+        <section class="card">
+            <h2>1. Pruebas de Ejecución en [Nombre del IDE 1, ej: Visual Studio]</h2>
+            <div style="margin-bottom: 1rem;">
+                <p><strong>Operaciones y validaciones demostradas:</strong></p>
+                <ul style="list-style-position: inside; padding-left: 0.5rem; margin-top: 0.3rem;">
+                    <li>[Explicar qué operaciones básicas se probaron: suma, resta, multiplicación, división, etc.]</li>
+                    <li><strong>Manejo de errores:</strong> [Describir cómo valida el programa las advertencias o errores críticos, ej: división entre cero o ingreso de letras en vez de números]</li>
+                </ul>
+            </div>
+            
+            <p><strong>Evidencias Reales de la Ejecución:</strong></p>
+            <div style="text-align: center; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <!-- Tus compañeros pueden meter una o dos imágenes de evidencia por IDE -->
+                <img src="img/calculadora-ide1-exito.png" alt="Calculadora corriendo en IDE 1" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+                <img src="img/calculadora-ide1-error.png" alt="Validación de errores en IDE 1" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+            </div>
+
+            <div style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 0.8rem; border-radius: 4px; margin-top: 1rem;">
+                <p><strong>⚠️ Dificultades Encontradas:</strong> [Escribir aquí cualquier problema técnico, bug de configuración o inconveniente hallado durante la ejecución en este entorno específico]</p>
+            </div>
+        </section>
+
+        <!-- PRUEBA IDE 2 -->
+        <section class="card">
+            <h2>2. Pruebas de Ejecución en [Nombre del IDE 2, ej: JetBrains Rider]</h2>
+            <div style="margin-bottom: 1rem;">
+                <p><strong>Operaciones y validaciones demostradas:</strong></p>
+                <ul style="list-style-position: inside; padding-left: 0.5rem; margin-top: 0.3rem;">
+                    <li>[Explicar el comportamiento del proyecto en este entorno]</li>
+                    <li><strong>Manejo de errores:</strong> [Detallar las validaciones y advertencias arrojadas]</li>
+                </ul>
+            </div>
+            
+            <p><strong>Evidencias Reales de la Ejecución:</strong></p>
+            <div style="text-align: center; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <img src="img/calculadora-ide2-exito.png" alt="Calculadora corriendo en IDE 2" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+                <img src="img/calculadora-ide2-error.png" alt="Validación de errores en IDE 2" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+            </div>
+
+            <div style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 0.8rem; border-radius: 4px; margin-top: 1rem;">
+                <p><strong>⚠️ Dificultades Encontradas:</strong> [Escribir aquí las dificultades particulares de este IDE]</p>
+            </div>
+        </section>
+
+        <!-- PRUEBA IDE 3 -->
+        <section class="card">
+            <h2>3. Pruebas de Ejecución en [Nombre del IDE 3, ej: VS Code]</h2>
+            <div style="margin-bottom: 1rem;">
+                <p><strong>Operaciones y validaciones demostradas:</strong></p>
+                <ul style="list-style-position: inside; padding-left: 0.5rem; margin-top: 0.3rem;">
+                    <li>[Explicar el comportamiento del proyecto en este entorno]</li>
+                    <li><strong>Manejo de errores:</strong> [Detallar las validaciones y advertencias arrojadas]</li>
+                </ul>
+            </div>
+            
+            <p><strong>Evidencias Reales de la Ejecución:</strong></p>
+            <div style="text-align: center; margin: 1rem 0; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <img src="img/calculadora-ide3-exito.png" alt="Calculadora corriendo en IDE 3" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+                <img src="img/calculadora-ide3-error.png" alt="Validación de errores en IDE 3" style="max-width: 45%; min-width: 280px; height: auto; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.15);">
+            </div>
+
+            <div style="background-color: #fff9e6; border-left: 4px solid #ffcc00; padding: 0.8rem; border-radius: 4px; margin-top: 1rem;">
+                <p><strong>⚠️ Dificultades Encontradas:</strong> [Escribir aquí las dificultades particulares de este IDE]</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer></footer>
+    <!-- 2. Vincula el archivo JS para que el menú funcione -->
+    <script src="js/menu-component.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

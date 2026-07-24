@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentación C#</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1. El menú aparecerá mágicamente aquí -->
+    <menu-superior></menu-superior>
+
+    <header>
+        <h1>C# Developer</h1>
+        <p>El portal interactivo sobre el lenguaje de desarrollo C#</p>
+    </header>
+
+    <main class="container">
+        <!-- TARJETA DE BIENVENIDA ESPECÍFICA DE C# -->
+        <section class="card" style="cursor: default;">
+            <h2>Bienvenido al portal interactivo de C#</h2>
+            <p>Este espacio está dedicado en su totalidad a <strong>C#</strong>, el potente lenguaje orientado a objetos de Microsoft.</p>
+        </section>
+
+        <!-- SECCIÓN DE SELECCIÓN O SECCIONES -->
+        <section class="card" style="background-color: transparent; box-shadow: none; padding: 0; cursor: default;">
+            <h2 style="margin-bottom: 1rem; border: none; color: var(--secondary-color);">LENGUAJES DE PROGRAMACION (POST-Z/VI-1) 2P26</h2>
+        </section>
+
+        
+
+        <section class="card" onclick="window.location.href='introduccion.html#descargas'">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <div>
+        <h3 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 1rem;">
+            Grupo 3
+        </h3>
+
+        <ul style="
+            list-style: disc;
+            padding-left: 30px;
+            margin: 0;
+            color: #555;
+            line-height: 2;
+            font-size: 1rem;
+        ">
+            <li>Gerardo Alfredo Salgado</li>
+            <li>Eduardo Francisco Flores Sauceda</li>
+            <li>Byron Alberto Pineda Mejía</li>
+            <li>Marcio Jezer Maradiaga Turcios</li>
+            <li>Gustavo Daniel Calix Calix</li>
+        </ul>
+    </div>
+</section>
+        </section>
+
+        <!-- BOTÓN PRINCIPAL: ACCESO A LA GUÍA COMPLETA -->
+        <section class="card" onclick="window.location.href='introduccion.html'">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h3 style="color: var(--primary-color); font-size: 1.4rem; margin-bottom: 0.3rem;">📖 Guía de Introducción Completa</h3>
+                    <p style="color: #555;">Accede al documento técnico principal con el origen, trayectoria del creador, la evolución cronológica y los usos del lenguaje.</p>
+                </div>
+                <span class="btn" style="margin-top: 0; white-space: nowrap;">Abrir Guía &rarr;</span>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer></footer>
+
+    <!-- 2. Vincula el archivo JS para que el menú funcione -->
+    <script src="js/menu-component.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
